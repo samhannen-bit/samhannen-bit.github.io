@@ -1,254 +1,349 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Name — Game Developer</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    font-family: 'Segoe UI', system-ui, sans-serif;
-    background: #0d0d12;
-    color: #e0e0e8;
-    line-height: 1.6;
-  }
-
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
-  /* Hero */
-  header {
-    padding: 100px 0 80px;
-    border-bottom: 1px solid #1e1e2a;
-  }
-
-  header h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: -1px;
-    margin-bottom: 12px;
-  }
-
-  header h1 span { color: #7c5cff; }
-
-  header p {
-    font-size: 1.15rem;
-    color: #9090a8;
-    max-width: 600px;
-  }
-
-  .links {
-    margin-top: 28px;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  .links a {
-    color: #7c5cff;
-    text-decoration: none;
-    font-weight: 600;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s;
-  }
-
-  .links a:hover { border-color: #7c5cff; }
-
-  /* Sections */
-  section {
-    padding: 70px 0;
-    border-bottom: 1px solid #1e1e2a;
-  }
-
-  section h2 {
-    font-size: 1.6rem;
-    margin-bottom: 32px;
-    letter-spacing: -0.5px;
-  }
-
-  /* Project cards */
-  .projects {
-    display: grid;
-    gap: 28px;
-  }
-
-  .project {
-    background: #14141c;
-    border: 1px solid #1e1e2a;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: border-color 0.2s, transform 0.2s;
-  }
-
-  .project:hover {
-    border-color: #7c5cff;
-    transform: translateY(-3px);
-  }
-
-  .project img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-    background: #1e1e2a;
-  }
-
-  .project-body { padding: 22px; }
-
-  .project-body h3 {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-  }
-
-  .project-body p {
-    color: #9090a8;
-    font-size: 0.95rem;
-    margin-bottom: 14px;
-  }
-
-  .tags {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 16px;
-  }
-
-  .tag {
-    font-size: 0.75rem;
-    background: #1e1e2a;
-    color: #b0b0c8;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-weight: 600;
-  }
-
-  .project-body a {
-    color: #7c5cff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-  }
-
-  /* About */
-  .about p {
-    color: #9090a8;
-    margin-bottom: 16px;
-    max-width: 700px;
-  }
-
-  .skills {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-
-  /* Footer */
-  footer {
-    padding: 40px 0;
-    text-align: center;
-    color: #606078;
-    font-size: 0.85rem;
-  }
-
-  footer a { color: #7c5cff; text-decoration: none; }
-
-  @media (max-width: 600px) {
-    header h1 { font-size: 2rem; }
-    header { padding: 70px 0 50px; }
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>excel dj website</title>
+  <style> 
+    .horizontal-box{
+      display: inline-flex;
+      flex-direction: column;
+    }
+    .displayable-text{
+      display: none;
+    }
+    .displayable-text:target {
+      display: inline-block;
+    }
+    p.big {
+    line-height: 1.2;
+    }
+    hr {
+    display: none;
+    }
+    .vertical-space {
+      margin-top: 20px; 
+    }
+    @font-face {
+      font-family: myFont;
+      src: url('fonts\EPSON MX-80 T.ttf');
+    }
+    body {
+      font-family: 'Courier New';
+    }
+    /* Make all link states the same color */
+    a, a:visited, a:hover, a:active {
+    color: blue; /* or any color you prefer */
+    text-decoration: none; /* removes underline */
+    }
+  </style>
 </head>
-<body>
+<body onload="startTime()">
+  <div>
+    <p>excel dj ~ cib o salmonui...</p>
+  </div>
 
-<div class="container">
+  <audio id="audio" loop>
+    <source src="sound/glitch.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
 
-  <header>
-    <h1>Your Name <span>//</span> Game Developer</h1>
-    <p>I build games and interactive experiences. Focused on gameplay systems, tools, and the small details that make games feel good.</p>
-    <div class="links">
-      <a href="https://github.com/yourusername">GitHub</a>
-      <a href="https://yourusername.itch.io">itch.io</a>
-      <a href="mailto:you@example.com">Email</a>
-      <a href="resume.pdf">Resume</a>
+  <div class="move">
+    <img src="" alt="excel dj" style="width:900px; height: 600px">
+  </div>
+
+  <div>  
+    <a href="https://djdjdjexcel.bandcamp.com/album/folk-s-real-mera">!folk ☆'s (real mera) out now</a>
+  </div>
+  <div>  
+    <a href="https://djdjdjexcel.bandcamp.com">bandcamp</a>
+  </div>
+
+  <div>  
+    <a href="https://www.subvert.fm/excel-dj">subvert</a>
+  </div>
+
+  <div class="horizontal-box">  
+    <div>  
+      <a href="javascript:void(0);" class="show" onclick="toggleVisibility('shows')">shows</a>
+      <div id="shows" class="displayable-text" style = "display: none;">
+        <p class="big">
+          <strong>5th feb '23</strong> <em>venue mot</em> loose trax w Cliché Toupée, Vanessa Bedoret, Twin/Kosty
+          <strong>1st april '23</strong> <em>boat????</em> minx w 
+          <strong>23rd april '23</strong> <em>spanners</em> limbs w Solar Rocks, Nanzhen Yang, Anjali, MUTE, swallow
+          <strong>29th april '23</strong> <em>set vault</em> roam ii w Euan Gubbins, Ashley's Fit Up, Cowboy Builder, VERYT, DJ Praktice, Yewen Jin, MUTE and swallow
+          <strong>8-11th June</strong> gnojki samba 
+          <strong>20th june '23</strong> <em>iklectik</em> supporting Jesse Kanda
+          <strong>14th jul '23</strong> <em>het bos</em> burenhinder: a midsummer night's dream w LC, Ella Jacobs, Instar
+          <strong>25th aug '23</strong> <em>set vault</em> limbs: plaza w Nanzhen Yang, Yewen Jin, Flywheel, lifeworld, tapes_2046, faebia, MUTE, swallow
+          <strong>7th sept '23</strong> <em>spanners</em> while you're online w Mitsubishi Suicide, etta97, sermon
+          <strong>1st dec '23</strong> <em>electrowerkz</em> riposte w too many to name lol
+          <strong>9th dec '23</strong> <em>the old church</em> shshchts w Ghostlore of Britain, Ellis Berwick, >  , Bodya Konakov, Mud Creeper
+          <br>
+          <div class="vertical-space"></div>
+          <strong>6th jan '24</strong> <em>corsica studios</em> Syphen w Blood of Aza b2b KAVARI, KLAUDIO, MVCOKO, novasdemise, S280F, Ship Sket, AFTERS3N, Astral Bandit, CYBERNOVA, POUNDSTERL1NG 
+          <strong>21st jan '24</strong> <em>spanners</em> glint music 'another release' launch party w wrestling (bianca scout + jb glazer), Jordan Playfair
+          <strong>9th feb '24</strong> <em>unit 58</em> [fragments on machines] w ex.sses, jung latch, Ilya Gurin-Babayeu, Glimmerman, Konakov, grysh77 
+          <strong>20th april '24</strong> <em>the old church</em> shshchts w Bodya Konakov, Max Svitlo, Miedo Total, Sgabe
+          <strong>28th april '24</strong> <em>avalon café</em> jano w Yewen Jin, Sseq
+          <strong>8th nov '24</strong> <em>avalon café</em> texture mag live w Deer Park, Void, Shauwdii, Smilegoth, DJ Corpmane, Madjestic Kasual, RISH, Spraelle, Able Archer
+          <strong>22nd Nov '24</strong> <em>spanners</em> gentle__corp 001 w Blood of Aza, gentler, hawazin o, shams, speakinginriddles
+          <br>
+          <div class="vertical-space"></div>
+          <strong>2th feb '25</strong> <em>blythe fields summit</em> saga2: skysill chills w earthangel, GODPARENT, kemitstry, laina + sp!r!t an0mal!es
+          <strong>6th feb '25</strong> <em>ormside projects</em> glint music presents: party 4 ((ex.sses)) w ex.sses, ACTION, feeo, jb glazer, Milk Eyed Sigh, Maya Vika
+          <strong>21st mar '25</strong> <em>rich mix</em> Not Crowded w Felix Lee, Zukovstheworld, Pretty Hands, Sseq
+          <strong>5th sep '25</strong> <em>spanners</em> glint music: excel dj zoomers release party w weed420, Pilgrim Raid, Vaseline
+          <strong>10th dec '25</strong> <em>spanners</em> scobe live.3 w Lagtime Seedling / Marriage Banxxxd / SCOBE Collective
+          <br>
+          <div class="vertical-space"></div>
+          <strong>4th feb '26</strong> <em>cafe oto</em> the hotel presents Stan Brakhage + Henry Cyer + excel dj
+          <strong>2nd may '26</strong> <em>horse hospital</em> the hotel presents Rocheman + Raisa K + excel dj
+          <strong>4th may '26</strong> <em>cafe oto</em> cm.PEACE w Lucinda Chua, Junior XL, Otto Hashmi, CJ Calderwood, Meeks
+          <strong>6th may '26</strong> <em>helen of troy</em> Lost Domain w Gus Cantor, Erin Hopes, C.P. Nailor, Toxic Positivity, Conrad Pack, Balmainjeans, Leeway
+          <strong>7th may '26</strong> <em>marquee moon</em> (dj set) Prometheus Rising Afterparty w bod [包家巷] (DJ), Heartcoregirl (DJ), Biblemami (DJ), dbeater 
+          <strong>18th jul '26</strong> <em>spanners</em> zolm w New Flesh, Wash Electra, London Community Laptop Orchestra
+          <strong>30th jul '26</strong> <em>cafe oto</em> JOLLY DISCS PRESENTS (PT.3) w RAP + Toxic Positivity + Betty Hammerschlag
+          <a href="https://www.cafeoto.co.uk/events/carl-stone-excel-dj-silvia-kastel-dj/"><strong>25th oct '26</strong> <em>cafe oto</em> Carl Stone + Excel DJ + Silvia Kastel (DJ)</a>
+          <br>
+          <div class="vertical-space"></div>
+          <strong>email:::</strong>
+          <br>
+          <div class="vertical-space"></div>
+          djdjexcel@gmail.com
+        </p>
+      </div>
     </div>
-  </header>
-
-  <section>
-    <h2>Projects</h2>
-    <div class="projects">
-
-      <!-- Project 1 -->
-      <article class="project">
-        <img src="images/project1.png" alt="Project One screenshot">
-        <div class="project-body">
-          <h3>Project One</h3>
-          <p>A short description of your game. What genre is it, what makes it interesting, and what did you do on it?</p>
-          <div class="tags">
-            <span class="tag">Unity</span>
-            <span class="tag">C#</span>
-            <span class="tag">Solo</span>
-          </div>
-          <a href="https://yourusername.itch.io/project-one">Play it →</a>
-        </div>
-      </article>
-
-      <!-- Project 2 -->
-      <article class="project">
-        <img src="images/project2.png" alt="Project Two screenshot">
-        <div class="project-body">
-          <h3>Project Two</h3>
-          <p>Another game or experience. Mention your role, the team size, and what you contributed.</p>
-          <div class="tags">
-            <span class="tag">Unreal</span>
-            <span class="tag">Blueprint</span>
-            <span class="tag">Team of 4</span>
-          </div>
-          <a href="https://github.com/yourusername/project-two">View on GitHub →</a>
-        </div>
-      </article>
-
-      <!-- Project 3 -->
-      <article class="project">
-        <img src="images/project3.png" alt="Project Three screenshot">
-        <div class="project-body">
-          <h3>Project Three</h3>
-          <p>A game jam game, prototype, or tool. Even small projects are worth showing if they demonstrate something.</p>
-          <div class="tags">
-            <span class="tag">Godot</span>
-            <span class="tag">GDScript</span>
-            <span class="tag">48h Jam</span>
-          </div>
-          <a href="https://yourusername.itch.io/project-three">Play it →</a>
-        </div>
-      </article>
-
+  </div>
+  
+<div></div>
+  
+  <div class="horizontal-box">
+    <div>  
+      <a href="javascript:void(0);" class="show" onclick="toggleVisibility('video')">video</a>
+      <div id="video" class="displayable-text" style = "display: none;">
+        <p class="big">
+          <a href="https://youtu.be/hYtJAPZ6TKg?si=htDXEMyOJA17ps34">excel dj - add a chamber / ond a rigner version (official video)</a> <br>
+          <a href="https://youtu.be/aMVlng1ZybU?si=L4Q5FnQz_1dT9eYs">excel dj - zoomers (official video)</a> <br>
+          <a href="https://youtu.be/8GBnqG-ddhw?si=BlwijbooNf1yHpDe">excel dj - its cool dmt phone (official video)</a> <br>
+          <a href="https://www.youtube.com/@anglcntrcts-po7pz">angl cntrcts channel</a> <br>
+        </p>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <section class="about">
-    <h2>About</h2>
-    <p>Write a short bio here. Where you're based, what you're studying or working on, and what kind of games you want to make.</p>
-    <p>You can also mention your background—how you got into game dev, what engines you use most, and what you're currently learning.</p>
-    <div class="skills">
-      <span class="tag">Unity</span>
-      <span class="tag">C#</span>
-      <span class="tag">Unreal</span>
-      <span class="tag">Godot</span>
-      <span class="tag">Blender</span>
-      <span class="tag">Git</span>
+  <div>  
+    <a href="https://morseltales.bandcamp.com/merch/gun-x03-morsel-zine">writing</a>
+  </div>
+
+  <div>  
+    <a href="https://dhannen.itch.io/">games</a>
+  </div>
+
+  <div class="horizontal-box">
+    <div>  
+      <a href="javascript:void(0);" class="show" onclick="toggleVisibility('zude')">zude</a>
+      <div id="zude" class="displayable-text" style = "display: none;">
+        <p class="big">
+          zude
+        </p>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <footer>
-    Built with GitHub Pages · <a href="mailto:you@example.com">you@example.com</a>
-  </footer>
+  <div>
+    <div class="horizontal-box">
+      <div>  
+        <a href="javascript:void(0);" class="show" onclick="toggleVisibility('realm eras')">realm eras</a>
+        <div id="realm eras" class="displayable-text" style = "display: none;">
+          <p class="big">
+            <a href="https://soundcloud.com/texturemag/texture-tape-039-excel-dj?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">"don't let them steal your meaning: dreamcast 2" shadow the hedgehog dj mix drama for Texture Mag, premiered at LIMBS Aug '23</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-</div>
+  <div>
+    <div class="horizontal-box">
+      <div>  
+        <a href="javascript:void(0);" class="show" onclick="toggleVisibility('about')">about</a>
+        <div id="about" class="displayable-text" style = "display: none;">
+          <p class="big">
+            artist <br>
+            lets appreciate the world
+            <br>
+            <br>
+            context born and transcending
+            <br>
+            <br>
+            in no other less: an image is always appearing to us <br>
+            and when i was walking down a street, construsted some 200 years before (maybe even before, but like many others i am taught and i mean really taught)<br>
+            heatdeath previews coming down on me, yet no panic filled the streets, just only quietly in the hearts<br>
+            there's a flat reflection, not like the whole reflection in which are actions go dictated by<br>
+            this flat reflection we are holders, pulled in by - dream echoes of other selves, but the dream echoes become more quiet, day by day, second by second<br>
+            imaginary numbers loom<br>
+            these times, is a soul eater, these times is only present but not in the fun way - because those visions of forwards and backwards mean nuthin to no-one<br>
+            to make sense of it is a momentus (momentous) task<br>
+            but you were here (hear) living it, don't forget that - the struggle<br>
+            what comes next... might be hard to imagine... i like to think it will all link up 
+            <br>
+            art for the young people who get it ;)
+            <div class="vertical-space"></div>
+            <a href="mailto:djdjexcel@gmail.com"><strong>contact i guess haha</strong></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div>  
+    <a href="https://t.me/+aM_Gs7x0ECNmNWFk">telegram group</a>
+  </div>
+
+  <div id="clock"></div>
+
+
+
+  <div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/IMWmbXtD7NU?si=n6JkoxXwjGyp33PE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  
+  <script>
+    var move = document.querySelector('.move');
+    var offsetX, offsetY;
+    var d = new Date();
+    var t = d.getTime();
+    var n  = d.getDay();
+    var days = Math.floor(t / (1000 * 60 * 60 * 24));
+    
+    //var imageArray = new Array("images/mgs_world.PNG", "images/fe.JPG","images/IMG_445.JPG", "images/IMG_273.JPG", "images/IMG_619.JPG", "images/me_and_u.jpg", "images/IMG_2894.jpg", "images/IMG_2880.jpg", "images/IMG_2847.jpg", "images/IMG_2697.jpg", "images/IMG_2612.jpg", "images/IMG_2611.jpg", "images/IMG_2610.jpg", "images/IMG_2603.jpg", "images/IMG_2595.jpg", "images/IMG_2586.jpg", "images/img_909.JPG", "images/IMG_0978.JPG", "images/IMG_2506.jpg", "images/IMG_995.JPG", "images/IMG_2585.jpg", "images/IMG_2584.jpg", "images/IMG_2583.jpg", "images/IMG_2506.jpg", "images/agent.jpg", "images/img_909.JPG" );
+    var imageArray = new Array("images/alt_cover.png", "images/cover.jpeg");
+    var fontArray = new Array();
+
+    var imageremainder = days % imageArray.length;
+    var fontremainder = days % fontArray.length;
+
+    var dailyImage = new Image();
+    var dailyImage = imageArray[imageremainder];
+
+    move.addEventListener('mousedown', mousedown);
+    move.addEventListener('touchstart', ontouchstart);
+
+    function setImageSrc() {
+      var imgElement = document.querySelector('.move img');
+      var randomImage = imageArray[Math.floor(Math.random() * imageArray.length)];
+      imgElement.src = randomImage;
+    }
+
+    
+
+    function mousedown(e) {
+      e.preventDefault(); // Prevent default behavior to avoid text selection
+      
+      // Play audio when user interacts with the element
+      audio.play();
+
+      // Calculate the offset
+      offsetX = e.clientX - move.getBoundingClientRect().left;
+      offsetY = e.clientY - move.getBoundingClientRect().top;
+
+      document.addEventListener('mousemove', mousemove);
+      document.addEventListener('mouseup', mouseup);
+    }
+
+    function mousemove(e) {
+      e.preventDefault(); // Prevent default behavior to avoid text selection
+      var x = e.clientX - offsetX + 'px';
+      var y = e.clientY - offsetY + 'px';
+      move.style.left = x;
+      move.style.top = y;
+    }
+
+    function mouseup() {
+      document.removeEventListener('mousemove', mousemove);
+      document.removeEventListener('mouseup', mouseup);
+    }
+
+    function ontouchstart(e) {
+      e.preventDefault(); // Prevent default behavior to avoid scrolling
+
+      // Play audio when user interacts with the element
+      audio.play();
+
+      // Calculate the offset
+      var touch = e.targetTouches[0];
+      offsetX = touch.clientX - move.getBoundingClientRect().left;
+      offsetY = touch.clientY - move.getBoundingClientRect().top;
+
+      document.addEventListener('touchmove', ontouchmove);
+      document.addEventListener('touchend', ontouchend);
+    }
+
+    function ontouchmove(e) {
+      e.preventDefault();
+      for (let touch of e.targetTouches) {
+        var x = touch.clientX - offsetX + "px";
+        var y = touch.clientY - offsetY + "px";
+        move.style.left = x;
+        move.style.top = y;
+      }
+    }
+
+    function ontouchend() {
+      document.removeEventListener('touchmove', ontouchmove);
+      document.removeEventListener('touchend', ontouchend);
+    }
+
+    function toggleVisibility(elementId) {
+        var element = document.getElementById(elementId);
+        if (element.style.display === "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    }
+    
+    /* function loopElipsis() {
+      var elipsis = document.querySelector('.elipsis');
+      var text = elipsis.textContent;
+      elipsis.textContent = text + '.';
+    } */
+
+    window.onload = function() {
+      var pElement = document.querySelector('p');
+      var baseText = 'excel dj - cib o salmonui';
+      var ellipsis = '';
+      var maxDots = 100;
+      var interval = 400; // Interval in milliseconds
+
+      setInterval(function() {
+          if (ellipsis.length >= maxDots) {
+              ellipsis = '';
+          } else {
+              ellipsis += '.';
+          }
+          pElement.textContent = baseText + ellipsis;
+      }, interval);
+      setImageSrc();
+    };
+
+    function startTime() {
+    const today = new Date();
+    let h = today.getHours();
+    let m = today.getMinutes();
+    let s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('clock').innerHTML =  h + ":" + m + ":" + s;
+    setTimeout(startTime, 1000);
+  }
+  
+  function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+  }
+  </script>
+  
 </body>
 </html>
