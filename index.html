@@ -1,10 +1,254 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Samuel Hannen's portfolio</title>
-  </head>
-  <body>
-    <h1>Hello</h1>
-    <p>Welcome to my website.</p>
-  </body>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Game Developer</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #0d0d12;
+    color: #e0e0e8;
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Hero */
+  header {
+    padding: 100px 0 80px;
+    border-bottom: 1px solid #1e1e2a;
+  }
+
+  header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+  }
+
+  header h1 span { color: #7c5cff; }
+
+  header p {
+    font-size: 1.15rem;
+    color: #9090a8;
+    max-width: 600px;
+  }
+
+  .links {
+    margin-top: 28px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .links a {
+    color: #7c5cff;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .links a:hover { border-color: #7c5cff; }
+
+  /* Sections */
+  section {
+    padding: 70px 0;
+    border-bottom: 1px solid #1e1e2a;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 32px;
+    letter-spacing: -0.5px;
+  }
+
+  /* Project cards */
+  .projects {
+    display: grid;
+    gap: 28px;
+  }
+
+  .project {
+    background: #14141c;
+    border: 1px solid #1e1e2a;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .project:hover {
+    border-color: #7c5cff;
+    transform: translateY(-3px);
+  }
+
+  .project img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    background: #1e1e2a;
+  }
+
+  .project-body { padding: 22px; }
+
+  .project-body h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .project-body p {
+    color: #9090a8;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+  }
+
+  .tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    background: #1e1e2a;
+    color: #b0b0c8;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+
+  .project-body a {
+    color: #7c5cff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  /* About */
+  .about p {
+    color: #9090a8;
+    margin-bottom: 16px;
+    max-width: 700px;
+  }
+
+  .skills {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 40px 0;
+    text-align: center;
+    color: #606078;
+    font-size: 0.85rem;
+  }
+
+  footer a { color: #7c5cff; text-decoration: none; }
+
+  @media (max-width: 600px) {
+    header h1 { font-size: 2rem; }
+    header { padding: 70px 0 50px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>Your Name <span>//</span> Game Developer</h1>
+    <p>I build games and interactive experiences. Focused on gameplay systems, tools, and the small details that make games feel good.</p>
+    <div class="links">
+      <a href="https://github.com/yourusername">GitHub</a>
+      <a href="https://yourusername.itch.io">itch.io</a>
+      <a href="mailto:you@example.com">Email</a>
+      <a href="resume.pdf">Resume</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+
+      <!-- Project 1 -->
+      <article class="project">
+        <img src="images/project1.png" alt="Project One screenshot">
+        <div class="project-body">
+          <h3>Project One</h3>
+          <p>A short description of your game. What genre is it, what makes it interesting, and what did you do on it?</p>
+          <div class="tags">
+            <span class="tag">Unity</span>
+            <span class="tag">C#</span>
+            <span class="tag">Solo</span>
+          </div>
+          <a href="https://yourusername.itch.io/project-one">Play it →</a>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project">
+        <img src="images/project2.png" alt="Project Two screenshot">
+        <div class="project-body">
+          <h3>Project Two</h3>
+          <p>Another game or experience. Mention your role, the team size, and what you contributed.</p>
+          <div class="tags">
+            <span class="tag">Unreal</span>
+            <span class="tag">Blueprint</span>
+            <span class="tag">Team of 4</span>
+          </div>
+          <a href="https://github.com/yourusername/project-two">View on GitHub →</a>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project">
+        <img src="images/project3.png" alt="Project Three screenshot">
+        <div class="project-body">
+          <h3>Project Three</h3>
+          <p>A game jam game, prototype, or tool. Even small projects are worth showing if they demonstrate something.</p>
+          <div class="tags">
+            <span class="tag">Godot</span>
+            <span class="tag">GDScript</span>
+            <span class="tag">48h Jam</span>
+          </div>
+          <a href="https://yourusername.itch.io/project-three">Play it →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>About</h2>
+    <p>Write a short bio here. Where you're based, what you're studying or working on, and what kind of games you want to make.</p>
+    <p>You can also mention your background—how you got into game dev, what engines you use most, and what you're currently learning.</p>
+    <div class="skills">
+      <span class="tag">Unity</span>
+      <span class="tag">C#</span>
+      <span class="tag">Unreal</span>
+      <span class="tag">Godot</span>
+      <span class="tag">Blender</span>
+      <span class="tag">Git</span>
+    </div>
+  </section>
+
+  <footer>
+    Built with GitHub Pages · <a href="mailto:you@example.com">you@example.com</a>
+  </footer>
+
+</div>
+
+</body>
 </html>
